@@ -1,55 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Purple</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    <script src="script.js" defer></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="script.js" defer></script>
 </head>
 <body>
-    <section class="m-2">
-        <div class="сontainer__popUp p-2 mt-2  bg-light">   
-            <h2 class="text-center" id="obrform" >Форма обратной связи</h2>
-            <div class="text-center"><a  href="#popup" class="glow-button"">гав</a></div>
-            <div id="popup" class="popup">
-                <div class="popup__body">
-                    <div class="popup__content">
-                        <div class="form">
-                            <form class="ajaxForm" action="https://formcarry.com/s/MpYzTc87u57" method="POST" accept-charset="UTF-8" id="form">
-                                <div class="form__body">
-                                    <h3 class="form__title">Отправка данных на почту</h3>
-                                    <div class="form__item">
-                                        <label for="formName" class="form__label">Имя*:</label>
-                                        <input id="formName" type="text" name="name" class="form__input _req">
-                                    </div>
-                                    <div class="form__item">
-                                        <label for="formEmail" class="form__label">Email*:</label>
-                                        <input id="formEmail" type="text" name="email" class="form__input _req _email">
-                                    </div>
-                                    <div class="form__item">
-                                        <label for="formMessage" class="form__label">Сообщение:</label>
-                                        <textarea name="message" id="formMessage" class="form__input"></textarea>
-                                    </div>
-                                    <div class="form__item">
-                                        <div class="checkbox">
-                                            <input id="formAgreement" checked type="checkbox" name="agreement" class="checkbox__input _req">
-                                          
-                                        </div>
-                                    </div>
-                                    <button type="submit" class="form__button">Отправить</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
+
+  <div class="button">
+    <a href="#" id="open_popUp">Оставить заявку</a>
+  </div>
+
+  
+  <div class="popUp" id="popUp">
+    <div class="popUp__container">
+      <div class="popUp__body" id="popUp__body">
+        <div class="form">
+        <form action="https://formcarry.com/s/MpYzTc87u57" accept-charset="UTF-8" id="form" class="form__body ajaxForm">
+          <h1 class="form__title">Обратная связь</h1>
+          <div class="form__item">
+            <label for="formName" class="form__label">Имя*</label>
+            <input type="text" id="formName" name="name" class="form__input _reque">
+          </div>
+          <div class="form__item">
+            <label for="formEmail" class="form__label">E-mail*</label>
+            <input type="text" id="formEmail" name="email" class="form__input _reque">
+          </div>
+          <div class="form__item">
+            <label for="formMessage" class="form__label">Сообщение</label>
+            <textarea name="message" id="formMessage" class="form__input"></textarea>
+          </div>
+          <div class="form__item">
+            <div class="checkbox">
+              <input type="checkbox" id="formAgree" name="agree" checked class="checkbox__input">
+              <label for="formAgree" class="checkbox__label _reque">Я даю свое согласие на <a href = "https://www.kinopoisk.ru/series/4445150/">обработку персональных данных</a></label>
             </div>
+          </div>
+          <button class="form__buttom" type="submit">Отправить</button>
+        </form>
         </div>
-    </section>
-</body> 
+        <div class="popUp__close" id="popUp__close">&#10006</div>
+      </div>
+    </div>
+  </div>
+ 
+  
+</body>
 </html>
