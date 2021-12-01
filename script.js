@@ -2,15 +2,6 @@ const openPopUp = document.getElementById('open_popUp');
 const closePopUp = document.getElementById('popUp__close');
 const popUp = document.getElementById('popUp');
 
-$('#formAgree').on('change', function () {
-  if ( $('#formAgree').prop('checked') ) {
-      $('.form__button').attr('disabled', false);
-  } else {
-      $('.form__button').attr('disabled', true);
-      alert("Поставьте согласие");
-  }
-});
-
 openPopUp.addEventListener('click', function (e) {
   e.preventDefault();
   popUp.classList.add('active');
@@ -19,6 +10,16 @@ openPopUp.addEventListener('click', function (e) {
 closePopUp.addEventListener('click', () => {
   popUp.classList.remove('active');
 })
+
+$('#formAgree').on('change', function () {
+  if ( $('#formAgree').prop('checked') ) {
+      $('.form__buttom').attr('disabled', false);
+  } 
+  else {
+    $('.form__buttom').attr('disabled', true);
+}
+});
+
 document.addEventListener('DOMContentLoaded', function () {
       $(function () {
         $(".ajaxForm").submit(function (e) {
@@ -55,3 +56,4 @@ $(window).on('hashchange', function (event) { //при клике на "наза
     }
   }
 });
+
