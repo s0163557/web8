@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
             dataType: "json",
             url: href,
             data: $(this).serialize(),
-              $('#formAgree').on('click', function () {
+            success: function (response) {
               if (response.status == "success") {
                 alert("Ваше обращение получено, спасибо!");
                 form.reset();
