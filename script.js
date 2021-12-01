@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
               } else {
                 alert("Ошибка отправки: " + response.message);
               }}}
-             else alert("Необходимо подвердить согласие");
+             else alert{("Необходимо подвердить согласие");}
             }
           });
         });
