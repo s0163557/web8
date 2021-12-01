@@ -1,5 +1,5 @@
 $('#formAgree').on('click', function () {
-    if ( $(this).is(':checked') ) {
+    if ( $(this).prop('checked') === true ) {
 const openPopUp = document.getElementById('open_popUp');
 const closePopUp = document.getElementById('popUp__close');
 const popUp = document.getElementById('popUp');
@@ -49,3 +49,4 @@ $(window).on('hashchange', function (event) { //при клике на "наза
   }
 });
     }
+}
